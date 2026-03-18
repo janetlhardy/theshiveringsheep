@@ -2,7 +2,7 @@
 
 ## Business Overview
 - **Business name:** The Shivering Sheep
-- **Products:** To be decided
+- **Products:** Hand-knit and felted bags and purses
 - **Physical location:** To be decided
 - **Selling channels:** To be decided
 - **Instagram:** To be decided
