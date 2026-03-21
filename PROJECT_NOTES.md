@@ -3,10 +3,10 @@
 ## Business Overview
 - **Business name:** The Shivering Sheep
 - **Products:** Hand-knit and felted bags and purses
-- **Physical location:** To be decided
+- **Physical location:** Victoria, BC
 - **Selling channels:** To be decided
-- **Instagram:** To be decided
-- **Website email:** To be decided
+- **Instagram:** @the_shivering_sheep
+- **Website email:** janet@theshiveringsheep.ca
 
 ---
 
@@ -14,10 +14,15 @@
 
 ### Files
 - **Location on computer:** `/Users/knitwit1/website/theshiveringsheep/`
-- **Main file:** To be created
+- **Main file:** `index.html`
+- **GitHub repo:** https://github.com/janetlhardy/theshiveringsheep
 
 ### Design
-- To be decided
+- Dark purple/black background
+- Single file: `index.html`
+- Photos stored in `images/` subfolder
+- Two sections: Purses (12 cards) and Totes (approx. 30 cards)
+- Hover pop effect on cards, swipe/drag carousel for photos
 
 ### Web Hosting
 - **Service:** To be decided
@@ -25,7 +30,9 @@
 ### File Structure
 ```
 theshiveringsheep/
-└── PROJECT_NOTES.md  ← this file
+├── index.html          ← the entire website
+├── images/             ← all product photos (.jpeg)
+├── PROJECT_NOTES.md    ← this file
 ```
 
 ---
@@ -36,11 +43,14 @@ theshiveringsheep/
 ---
 
 ## Outstanding To-Dos
-- [ ] Decide on products/business focus
-- [ ] Decide on website design and hosting
+- [x] Decide on products/business focus
+- [x] Build website
+- [x] Set up Instagram
+- [x] Set up business email
+- [ ] Decide on web hosting
 - [ ] Register domain name(s)
-- [ ] Set up business email
-- [ ] Build website
+- [ ] Add descriptions to purse cards
+- [ ] Add double-handle main photo for Chartreuse/Lavender tote
 
 ---
 
@@ -48,4 +58,5 @@ theshiveringsheep/
 
 | Service | Purpose | Login | Password |
 |---|---|---|---|
-| (none yet) | | | |
+| Instagram | @the_shivering_sheep | To be confirmed | Dashlane |
+| Website email | janet@theshiveringsheep.ca | To be confirmed | Dashlane |
