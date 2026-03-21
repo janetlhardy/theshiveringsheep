@@ -262,12 +262,31 @@
     }
 
     /* ── Card Image ── */
-    .card img {
+    .card-main {
       width: 100%;
       height: 260px;
       object-fit: cover;
       display: block;
     }
+
+    .card-thumbs {
+      display: flex;
+      gap: 3px;
+      padding: 3px;
+      background: var(--dark);
+    }
+
+    .card-thumbs img {
+      flex: 1;
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 4px;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .card-thumbs img:hover { opacity: 1; }
 
     /* ── Section Description ── */
     .section-desc {
@@ -450,217 +469,293 @@
       <h2 class="section-title">Totes</h2>
       <div class="section-divider"></div>
     </div>
-    <p class="section-desc">Each tote is individually hand-knit in pure wool and wet-felted by hand — a process that locks the fibres together to create a dense, sturdy fabric that holds its shape beautifully. Totes are unlined, and while each follows the same pattern, hand-crafting means dimensions may vary slightly. Approximate size: 38 cm wide &times; 28 cm tall &times; 8 cm deep.</p>
+    <p class="section-desc">Each tote is individually hand-knit in pure wool and wet-felted by hand — a process that locks the fibres together to create a dense, sturdy fabric that holds its shape beautifully. Totes are unlined, and while each follows the same pattern, hand-crafting means dimensions may vary slightly. Approximate size: 38 cm tall &times; 28 cm wide &times; 8 cm deep.</p>
     <div class="gallery">
 
+      <!-- 1 -->
       <div class="card">
-        <img src="IMG_2508.jpeg" alt="Orange and teal felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Orange, Teal</p>
+        <img class="card-main" src="IMG_2508.jpeg" alt="Turquoise and neon orange felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image.jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (1).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Turquoise/Neon Orange</p></div>
       </div>
 
+      <!-- 2 -->
       <div class="card">
-        <img src="images/Image (2).jpeg" alt="Lime green and orange felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Lime Green, Orange</p>
+        <img class="card-main" src="images/Image (3).jpeg" alt="Lime green and orange felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (2).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (4).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Lime Green/Orange</p></div>
       </div>
 
+      <!-- 3 -->
       <div class="card">
-        <img src="images/Image (5).jpeg" alt="Aqua and teal felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Aqua, Teal</p>
+        <img class="card-main" src="images/Image (7).jpeg" alt="Teal and sky blue felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (5).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (6).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Teal/Sky Blue</p></div>
       </div>
 
+      <!-- 4 -->
       <div class="card">
-        <img src="images/Image (9).jpeg" alt="Red and royal blue felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Red, Royal Blue</p>
+        <img class="card-main" src="images/Image (9).jpeg" alt="Burnt orange and royal blue felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (8).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (10).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Burnt Orange/Royal Blue</p></div>
       </div>
 
+      <!-- 5 -->
       <div class="card">
-        <img src="images/Image (13).jpeg" alt="Red and steel blue felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Red, Steel Blue</p>
+        <img class="card-main" src="images/Image (13).jpeg" alt="Red and steel blue felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (11).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (12).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Red/Steel Blue</p></div>
       </div>
 
+      <!-- 6 — no front-handles photo available -->
       <div class="card">
-        <img src="images/Image (14).jpeg" alt="Teal blue marled felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Teal Blue (Marled)</p>
+        <img class="card-main" src="images/Image (16).jpeg" alt="Teal blue marled felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (14).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (15).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Teal Blue (Marled)</p></div>
       </div>
 
+      <!-- 7 -->
       <div class="card">
-        <img src="images/Image (18).jpeg" alt="Olive green and crimson felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Olive Green, Crimson</p>
+        <img class="card-main" src="images/Image (18).jpeg" alt="Crimson and heather green felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (17).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (19).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Crimson/Heather Green</p></div>
       </div>
 
+      <!-- 8 -->
       <div class="card">
-        <img src="images/Image (20).jpeg" alt="Dark green and magenta felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Dark Green, Magenta</p>
+        <img class="card-main" src="images/Image (20).jpeg" alt="Forest green and hot pink felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (21).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (22).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Forest Green/Hot Pink</p></div>
       </div>
 
+      <!-- 9 -->
       <div class="card">
-        <img src="images/Image (23).jpeg" alt="Blue and camel felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Blue, Camel</p>
+        <img class="card-main" src="images/Image (23).jpeg" alt="Royal blue and camel felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (24).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (25).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Royal Blue/Camel</p></div>
       </div>
 
+      <!-- 10 -->
       <div class="card">
-        <img src="images/Image (28).jpeg" alt="Orange and bright green felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Orange, Bright Green</p>
+        <img class="card-main" src="images/Image (28).jpeg" alt="Orange and lime felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (26).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (27).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Orange/Lime</p></div>
       </div>
 
+      <!-- 11 -->
       <div class="card">
-        <img src="images/Image (30).jpeg" alt="Purple and hot pink felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Purple, Hot Pink</p>
+        <img class="card-main" src="images/Image (30).jpeg" alt="Purple and hot pink felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (29).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (31).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Purple/Hot Pink</p></div>
       </div>
 
+      <!-- 12 -->
       <div class="card">
-        <img src="images/Image (34).jpeg" alt="Navy blue and teal felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Navy Blue, Teal</p>
+        <img class="card-main" src="images/Image (34).jpeg" alt="Navy blue and teal felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (32).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (33).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Navy Blue/Teal</p></div>
       </div>
 
+      <!-- 13 -->
       <div class="card">
-        <img src="images/Image (36).jpeg" alt="Mustard yellow and brown felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Mustard Yellow, Brown</p>
+        <img class="card-main" src="images/Image (36).jpeg" alt="Brown and mustard yellow felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (35).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Brown/Mustard Yellow</p></div>
       </div>
 
+      <!-- 14 -->
       <div class="card">
-        <img src="images/Image (38).jpeg" alt="Orange and mint felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Orange, Mint</p>
+        <img class="card-main" src="images/Image (38).jpeg" alt="Burnt orange and mint felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (37).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Burnt Orange/Mint</p></div>
       </div>
 
+      <!-- 15 -->
       <div class="card">
-        <img src="images/Image (41).jpeg" alt="Dark green and red felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Dark Green, Red</p>
+        <img class="card-main" src="images/Image (41).jpeg" alt="Forest green and red felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (39).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (40).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Forest Green/Red</p></div>
       </div>
 
+      <!-- 16 -->
       <div class="card">
-        <img src="images/Image (44).jpeg" alt="Sage green and mustard felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Sage Green, Mustard</p>
+        <img class="card-main" src="images/Image (44).jpeg" alt="Sage green and mustard felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (43).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (45).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Sage Green/Mustard</p></div>
       </div>
 
+      <!-- 17 -->
       <div class="card">
-        <img src="images/Image (47).jpeg" alt="Bright green and turquoise felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Bright Green, Turquoise</p>
+        <img class="card-main" src="images/Image (47).jpeg" alt="Lime and turquoise felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (46).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (48).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Lime/Turquoise</p></div>
       </div>
 
+      <!-- 18 -->
       <div class="card">
-        <img src="images/Image (49).jpeg" alt="Blue and red felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Blue, Red</p>
+        <img class="card-main" src="images/Image (49).jpeg" alt="Royal blue and red felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (50).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Royal Blue/Red</p></div>
       </div>
 
+      <!-- 19 removed — duplicate of card 13 -->
+
+      <!-- 20 -->
       <div class="card">
-        <img src="images/Image (51).jpeg" alt="Mustard yellow and olive felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Mustard Yellow, Olive</p>
-        </div>
+        <img class="card-main" src="images/Image (52).jpeg" alt="Burnt orange and mint felted tote" loading="lazy" />
+        <div class="card-body"><p class="card-name">Burnt Orange/Mint</p></div>
       </div>
 
+      <!-- 21 -->
       <div class="card">
-        <img src="images/Image (52).jpeg" alt="Mint green and rust felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Mint Green, Rust</p>
+        <img class="card-main" src="images/Image (53).jpeg" alt="Deep red and ocean blue felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (54).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Deep Red/Ocean Blue</p></div>
       </div>
 
+      <!-- 22 -->
       <div class="card">
-        <img src="images/Image (53).jpeg" alt="Turquoise and magenta felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Turquoise, Magenta</p>
+        <img class="card-main" src="images/Image (56).jpeg" alt="Plum and lavender felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (55).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (57).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (58).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Plum/Lavender</p></div>
       </div>
 
+      <!-- 23 -->
       <div class="card">
-        <img src="images/Image (56).jpeg" alt="Plum and lavender felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Plum, Lavender</p>
+        <img class="card-main" src="images/Image (60).jpeg" alt="Scarlet and turquoise felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (59).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (61).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Scarlet/Turquoise</p></div>
       </div>
 
+      <!-- 24 -->
       <div class="card">
-        <img src="images/Image (60).jpeg" alt="Tangerine and rust felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Tangerine, Rust</p>
+        <img class="card-main" src="images/Image (65).jpeg" alt="Peach and periwinkle felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (66).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (67).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Peach/Periwinkle</p></div>
       </div>
 
+      <!-- 25 -->
       <div class="card">
-        <img src="images/Image (65).jpeg" alt="Mustard yellow and periwinkle felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Mustard Yellow, Periwinkle</p>
+        <img class="card-main" src="images/Image (69).jpeg" alt="Chartreuse and lavender felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (70).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (71).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Chartreuse/Lavender</p></div>
       </div>
 
+      <!-- 26 -->
       <div class="card">
-        <img src="images/Image (69).jpeg" alt="Chartreuse and lavender felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Chartreuse, Lavender</p>
+        <img class="card-main" src="images/Image (73).jpeg" alt="Navy and powder blue felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (72).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (74).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Navy/Powder Blue</p></div>
       </div>
 
+      <!-- 27 -->
       <div class="card">
-        <img src="images/Image (73).jpeg" alt="Silver grey and charcoal felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Silver Grey, Charcoal</p>
+        <img class="card-main" src="images/Image (82).jpeg" alt="Purple and lime felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (81).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (83).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Purple/Lime</p></div>
       </div>
 
+      <!-- 28 -->
       <div class="card">
-        <img src="images/Image (82).jpeg" alt="Lime green and purple felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Lime Green, Purple</p>
+        <img class="card-main" src="images/Image (84).jpeg" alt="Forest green and cotton candy felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (85).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (86).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Forest Green/Cotton Candy</p></div>
       </div>
 
+      <!-- 29 -->
       <div class="card">
-        <img src="images/Image (84).jpeg" alt="Green and pink felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Green, Pink</p>
+        <img class="card-main" src="images/Image (87).jpeg" alt="Purple and turquoise felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="images/Image (88).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (89).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="images/Image (90).jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
+        <div class="card-body"><p class="card-name">Purple/Turquoise</p></div>
       </div>
 
+      <!-- 30 -->
       <div class="card">
-        <img src="images/Image (87).jpeg" alt="Purple and turquoise felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Purple, Turquoise</p>
+        <img class="card-main" src="IMG_2517.jpeg" alt="Forest green and burnt orange felted tote" loading="lazy" />
+        <div class="card-thumbs">
+          <img src="IMG_2516.jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
+          <img src="IMG_2518.jpeg" alt="alternate view" loading="lazy" onclick="swapPhoto(this)" />
         </div>
-      </div>
-
-      <div class="card">
-        <img src="IMG_2517.jpeg" alt="Rust and forest green felted tote bag" loading="lazy" />
-        <div class="card-body">
-          <p class="card-name">Rust, Forest Green</p>
-        </div>
+        <div class="card-body"><p class="card-name">Forest Green/Burnt Orange</p></div>
       </div>
 
     </div>
@@ -696,6 +791,16 @@
     <p class="footer-logo">The Shivering Sheep</p>
     <p>&copy; 2026 The Shivering Sheep &mdash; Hand-knit with love in Victoria, BC.</p>
   </footer>
+
+  <script>
+    function swapPhoto(thumb) {
+      const card = thumb.closest('.card');
+      const main = card.querySelector('.card-main');
+      const tmp = main.src;
+      main.src = thumb.src;
+      thumb.src = tmp;
+    }
+  </script>
 
 </body>
 </html>
