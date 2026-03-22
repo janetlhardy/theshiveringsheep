@@ -51,6 +51,7 @@ theshiveringsheep/
 - [ ] Register domain name(s)
 - [ ] Add descriptions to purse cards
 - [ ] Add double-handle main photo for Chartreuse/Lavender tote
+- [ ] Take more photos of Twilight and add to website
 
 ---
 
