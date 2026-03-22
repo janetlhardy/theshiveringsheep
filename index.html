@@ -343,6 +343,51 @@
       display: block;
     }
 
+    /* ── Care ── */
+    #care {
+      text-align: center;
+    }
+
+    #care h2 {
+      font-family: 'Lilita One', cursive;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: 3px;
+      color: var(--orange);
+      margin-bottom: 32px;
+    }
+
+    .care-grid {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .care-card {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid var(--orange);
+      border-radius: 16px;
+      padding: 28px 32px;
+      flex: 1;
+      min-width: 260px;
+      text-align: left;
+    }
+
+    .care-card h3 {
+      font-family: 'Boogaloo', sans-serif;
+      font-size: 1.3rem;
+      color: var(--pink);
+      margin-bottom: 12px;
+    }
+
+    .care-card p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+    }
+
     /* ── Contact ── */
     #contact {
       text-align: center;
@@ -422,6 +467,7 @@
   <nav>
     <a href="#purses">Purses</a>
     <a href="#totes">Totes</a>
+    <a href="#care">Care</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -1208,9 +1254,24 @@
     </div>
   </section>
 
+  <!-- Care -->
+  <section id="care">
+    <h2>Care Instructions</h2>
+    <div class="care-grid">
+      <div class="care-card">
+        <h3>Purses</h3>
+        <p>Spot clean first — this will handle most things. If more is needed, hand wash in cool water with a gentle soap. Roll in a towel to remove excess moisture, then reshape and air dry.</p>
+      </div>
+      <div class="care-card">
+        <h3>Totes</h3>
+        <p>Spot clean first. If needed, machine wash in cold water on a gentle cycle — unless you want to felt it even more! Do not spin. Reshape and air dry.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- About -->
   <section id="about">
-    <h2>The Maker</h2>
+    <h2>The Maker — Janet Hardy</h2>
     <img class="about-photo" src="images/Facetune_21-03-2026-15-31-04.jpeg" alt="Janet, maker of The Shivering Sheep" loading="lazy" />
     <p>I learned to knit at age six, taught by my father — a prairie homestead child from a family of eight, where knitting was simply something everyone did, brothers and sisters alike. My mother soon took over my education. She had learned as a child in England during World War II, knitting hats for soldiers alongside her schoolmates. She was a beautiful, lightning-fast knitter who never knit a gauge swatch in her life.</p>
     <p>Over the years I mastered cables, lacework, colourwork, and countless other techniques — and then discovered felting, quite by accident. That happy accident led me to courses in wet felting, and eventually to my own deep dive into needle felting and fulling, which is technically what I do with all my bags.</p>
