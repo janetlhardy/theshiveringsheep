@@ -88,6 +88,10 @@ There is no Zoho, no GoDaddy, no other provider involved. See the scam note belo
    months early is a manufactured emergency.
 3. **Unasked for.** Real renewal notices come from the company you actually pay.
 
+Nothing was clicked and no password was entered, so no action was needed.
+**Janet has confirmed she has no Zoho account of any kind** — so anything claiming to be Zoho,
+about any subject, is junk and can be deleted on sight.
+
 **Rules:**
 - **Never click a link in a domain or email renewal message.** Type `namecheap.com` yourself, or
   open it from Dashlane, and check the account directly. This takes ten seconds and is always safe.
