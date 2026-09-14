@@ -9,12 +9,16 @@ _This folder is kept off the public website._
 
 | File | What it is | Finished size | Order it as… |
 |---|---|---|---|
-| `business-cards.pdf` | 2 pages: front + back | 3.5 × 2 in | Standard business cards, **double-sided** |
+| `business-card-front.pdf` | **Upload this to the front** | 3.5 × 2 in | Standard business cards, **double-sided** |
+| `business-card-back.pdf` | **Upload this to the back** | 3.5 × 2 in | (same order) |
+| `business-cards.pdf` | Both sides in one 2-page file, if a printer wants that instead | 3.5 × 2 in | — |
+| `business-card-front.png`, `business-card-back.png` | The same two sides as 300 dpi images, if a site handles a PDF badly | 3.5 × 2 in | — |
 | `booth-banner.pdf` | **The file you upload** | 72 × 24 in trimmed (file is 72.5 × 24.5 with bleed) | Vinyl banner, **6 ft × 2 ft**, hemmed with grommets |
 | `booth-banner.jpg` | The same banner as an image, if a site won't take the PDF | 72 × 24 in | — |
 
-The `.html` files are the editable source, the `.png` files are previews to look at, and
-`cutouts.py` is explained at the bottom.
+The `.html` files are the editable source. **Edit those, then run `python3 build.py`** — it
+regenerates every PDF and PNG in one go. Never edit a PDF directly; the next build would overwrite
+it. `cutouts.py` is explained at the bottom.
 
 ## What's on them
 
@@ -43,8 +47,22 @@ to focus on, so it would be decoration pretending to be useful.
 
 ## Ordering from VistaPrint
 
-**Business cards** — Business Cards → Standard → **3.5 × 2 in**, **double-sided**, upload
-`business-cards.pdf`. If it asks about bleed, the file already has it: say **yes / keep bleed**.
+**Business cards**
+
+1. Business Cards → Standard → **3.5 × 2 in**, and choose **double-sided** (printed both sides).
+2. Pick the option like **"Upload your complete design"** — not one of their templates.
+3. There are **two separate slots, Front and Back**. Put `business-card-front.pdf` in the front one
+   and `business-card-back.pdf` in the back one. That's why they're separate files: hand VistaPrint
+   the 2-page `business-cards.pdf` and you're left guessing which page went where.
+4. If it asks about bleed, the files already have it: say **yes / keep bleed**.
+
+**If the artwork lands small in the top-left corner** — that's their uploader placing the file
+without scaling it, exactly as it does with the banner. **Press `Fill`**, or drag the corner handle
+out until the design covers the whole card. It will crop a sliver as it scales, which is what the
+bleed is for. Nothing is wrong with the file.
+
+**If the PDF misbehaves**, upload `business-card-front.png` and `business-card-back.png` instead.
+Same artwork, 300 dpi, and some sites place an image more predictably than a PDF.
 
 **Banner** — Signs & Banners → Vinyl Banners → set the size to **6 ft × 2 ft (72 × 24 in)**. It has
 to match, or they will scale the artwork. Choose the option like **"Upload your complete design"**
@@ -99,4 +117,4 @@ you aren't using afterwards — they're 3 MB each and the folder grows quickly.
 ## Want changes?
 
 Tell Claude — different bags, different wording, a table sign as well, price cards for the show.
-The PDFs are regenerated from the HTML with headless Chrome.
+Everything rebuilds from the HTML with `python3 build.py`, which drives headless Chrome.
