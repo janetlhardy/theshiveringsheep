@@ -54,6 +54,31 @@ There is no Zoho, no GoDaddy, no other provider involved. See the scam note belo
 
 ---
 
+## Print Materials (added 2026-09-14)
+
+For the **December craft show**. Files are in `print-materials/`, kept off the public site by
+`_config.yml`. Full ordering instructions are in `print-materials/README.md`.
+
+| Piece | Order as | File to upload |
+|---|---|---|
+| Business cards | 3.5 × 2 in, **double-sided** | `business-cards.pdf` |
+| Booth banner | Vinyl banner **6 ft × 2 ft**, hemmed with grommets | `booth-banner.pdf` |
+
+Both match the website — Caveat wordmark in the pink/purple/turquoise gradient on `#0D0020`.
+
+**What's deliberately not on them:**
+
+- **No Instagram.** Janet doesn't post there, and a handle leading to an empty feed reads worse
+  than no handle at all.
+- **No QR code on the banner.** Hung behind a table it's too far from anyone's phone to focus on.
+
+**Why this is modest:** The Shivering Sheep is **clearing existing stock** — a large collection of
+bags and purses, with no plans to make more. So the print pieces do the minimum useful job (say the
+name, show the work, point at the website) rather than building a brand that isn't going to be
+continued. Worth remembering before suggesting any more marketing spend here.
+
+---
+
 ## Outstanding To-Dos
 - [x] Decide on products/business focus
 - [x] Build website
@@ -64,6 +89,7 @@ There is no Zoho, no GoDaddy, no other provider involved. See the scam note belo
 - [ ] Add descriptions to purse cards
 - [ ] Add double-handle main photo for Chartreuse/Lavender tote
 - [ ] Take more photos of Twilight and add to website
+- [x] Business card and booth banner for the December show ✅ (2026-09-14) — `print-materials/`
 
 ---
 

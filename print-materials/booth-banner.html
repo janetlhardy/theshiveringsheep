@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Boogaloo&family=Nunito:wght@600;800&display=swap" rel="stylesheet" />
+<style>
+  /* ────────────────────────────────────────────────────────────────
+     The Shivering Sheep — booth banner, 6 ft × 2 ft.
+
+     Trim 72 × 24 in + 0.25 in bleed all round = 72.5 × 24.5 in.
+     The bleed is deliberate: VistaPrint's uploader drops the file onto
+     their canvas and you press "Fill", which scales and crops slightly.
+     The quarter-inch is there to be eaten. Never export at exact trim.
+
+     No QR code, on purpose — hung behind a table it is too far from
+     anyone's phone to focus on. The name is the banner's whole job.
+
+     Layout: name on the left where an eye lands first, bags on a cream
+     panel to the right. The bags are the transparent PNGs made by
+     cutouts.py — the original photographs sit on a white studio
+     background and would otherwise each show up in a pale rectangle.
+     ──────────────────────────────────────────────────────────────── */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --pink:#FF1493; --purple:#9B30FF; --turquoise:#00CED1;
+    --orange:#FF6600; --yellow:#FFD700; --dark:#0D0020; --cream:#F7F2EA;
+  }
+  html,body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+  @page { size:72.5in 24.5in; margin:0; }
+
+  .banner{
+    position:relative; width:72.5in; height:24.5in; overflow:hidden;
+    background:var(--dark); font-family:'Nunito',sans-serif; color:#fff;
+    display:flex; align-items:center;
+  }
+
+  /* website's hero glow, stretched wide */
+  .glow{
+    position:absolute; inset:0; z-index:0;
+    background:radial-gradient(ellipse 62% 120% at 30% 34%, #2D004D 0%, var(--dark) 74%);
+  }
+  .sheep{
+    position:absolute; z-index:1; left:60.5in; top:-3.6in;
+    font-size:15in; line-height:1; opacity:.05;
+  }
+
+  /* ── left: the name ── */
+  /* 3.1in from the trim edge = 2.85in of usable margin after bleed,
+     comfortably clear of the grommets along the hem. */
+  .left{
+    position:relative; z-index:3; width:38in;
+    padding-left:3.1in; padding-right:1.2in;
+  }
+  .wordmark{
+    font-family:'Caveat',cursive; font-weight:700;
+    /* 5.4in over two lines. Much bigger and it overruns the banner's
+       height; on one line it would have to drop to about 4.4in to fit
+       the column, which reads smaller from across a hall. */
+    font-size:5.4in; line-height:.94; letter-spacing:.02in;
+    /* inline-block matters: without it the gradient only shows its
+       middle band across the letters instead of running end to end */
+    display:inline-block;
+    background:linear-gradient(112deg,var(--pink) 3%,var(--purple) 50%,var(--turquoise) 95%);
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 .05in .16in rgba(0,0,0,.6));
+  }
+  .rule{
+    width:23in; height:.13in; margin:.7in 0 .6in;
+    background:linear-gradient(90deg,var(--pink),var(--purple),var(--turquoise),var(--yellow));
+    border-radius:.07in;
+  }
+  .tagline{
+    font-family:'Boogaloo',cursive; color:var(--turquoise);
+    font-size:1.95in; line-height:1.05; letter-spacing:.035em;
+  }
+  .url{
+    font-family:'Nunito',sans-serif; font-weight:800;
+    font-size:1.4in; letter-spacing:.012em; margin-top:.7in; color:#fff;
+  }
+
+  /* ── right: the bags ── */
+  .right{
+    position:relative; z-index:3; flex:1; height:100%;
+    display:flex; align-items:center; justify-content:center;
+    padding:2.4in 2.9in 2.4in .4in;
+  }
+  .panel{
+    width:100%; height:100%; background:var(--cream);
+    border-radius:1.1in; box-shadow:0 0 0 .13in rgba(255,255,255,.14);
+    display:flex; align-items:center; justify-content:space-evenly;
+    padding:1.1in .9in;
+  }
+  .panel img{
+    max-height:100%; max-width:23%; object-fit:contain;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="glow"></div>
+  <div class="sheep">🐑</div>
+
+  <div class="left">
+    <div class="wordmark">The Shivering<br />Sheep</div>
+    <div class="rule"></div>
+    <p class="tagline">Hand-Knit. Felted. One of a Kind.</p>
+    <p class="url">theshiveringsheep.ca</p>
+  </div>
+
+  <div class="right">
+    <div class="panel">
+      <img src="images/cut-bag-circle-back.png"   alt="Blue felted bag patterned with coloured circles" />
+      <img src="images/cut-bag-spiral-rose.png"   alt="Pink and orange felted bag with a spiral rose" />
+      <img src="images/cut-bag-nordic-flurry.png" alt="Teal felted tote knitted with cream snowflakes" />
+      <img src="images/cut-bag-bullseye.png"      alt="Round blue and red felted bag with a bullseye pattern" />
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

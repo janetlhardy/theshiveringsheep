@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Boogaloo&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+<style>
+  /* ────────────────────────────────────────────────────────────────
+     The Shivering Sheep — business cards, front and back.
+     Matches the website: Caveat wordmark in a pink→purple→turquoise
+     gradient, Boogaloo for the tagline, Nunito for detail, on #0D0020.
+
+     Trim 3.5 × 2 in + 0.125 in bleed all round = 3.75 × 2.25 in.
+     ──────────────────────────────────────────────────────────────── */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root{
+    --pink:#FF1493; --purple:#9B30FF; --turquoise:#00CED1;
+    --yellow:#FFD700; --dark:#0D0020; --cream:#F7F2EA;
+  }
+  html,body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+  @page { size:3.75in 2.25in; margin:0; }
+
+  .card{
+    position:relative; width:3.75in; height:2.25in; overflow:hidden;
+    page-break-after:always; font-family:'Nunito',sans-serif;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+  }
+  .card:last-child{ page-break-after:auto; }
+
+  /* Everything meaningful stays 0.28in from the edge, so a slightly
+     off-centre trim can never cut into the type. */
+  .safe{ position:relative; z-index:3; padding:0 .3in; }
+
+  /* ─────────────── FRONT ─────────────── */
+  .front{ background:var(--dark); color:#fff; }
+
+  /* the same radial glow the website's hero uses */
+  .front .glow{
+    position:absolute; inset:0; z-index:0;
+    background:radial-gradient(ellipse 85% 75% at 50% 26%, #2D004D 0%, var(--dark) 72%);
+  }
+  /* a very faint sheep, exactly as on the site */
+  .front .sheep{
+    position:absolute; z-index:1; right:-.18in; bottom:-.42in;
+    font-size:1.5in; line-height:1; opacity:.05;
+  }
+
+  .wordmark{
+    font-family:'Caveat',cursive; font-weight:700; line-height:1.0;
+    /* inline-block matters: without it the letters only pick up the
+       middle of the gradient instead of running across the whole name */
+    display:inline-block;
+    background:linear-gradient(115deg,var(--pink) 4%,var(--purple) 52%,var(--turquoise) 96%);
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .front .wordmark{ font-size:37pt; letter-spacing:.5pt; }
+
+  .tagline{
+    font-family:'Boogaloo',cursive; color:var(--turquoise);
+    font-size:9.5pt; letter-spacing:.055em; margin-top:3pt;
+  }
+
+  .rule{
+    width:1.35in; height:1.6pt; margin:9pt auto 8pt;
+    background:linear-gradient(90deg,var(--pink),var(--purple),var(--turquoise));
+    border-radius:1pt;
+  }
+
+  .contact{ font-size:8.6pt; font-weight:600; line-height:1.5; color:#fff; }
+  .contact .url{ font-weight:800; letter-spacing:.012em; }
+  .contact .email{ color:rgba(255,255,255,.80); font-weight:600; }
+
+  /* ─────────────── BACK ─────────────── */
+  /* Cream rather than dark. The bag is a transparent PNG made by
+     cutouts.py, so it would sit happily on either — but a felted bag
+     reads warmer against cream, and it gives the card two distinct
+     sides rather than two dark ones. */
+  .back{ background:var(--cream); color:var(--dark); justify-content:space-between; }
+
+  .back .band{
+    position:absolute; top:0; left:0; right:0; height:.09in; z-index:2;
+    background:linear-gradient(90deg,var(--pink),var(--purple),var(--turquoise),var(--yellow));
+  }
+  .back .bagwrap{
+    flex:1; width:100%; display:flex; align-items:center; justify-content:center;
+    padding:.26in .3in .02in;
+  }
+  .back .bag{
+    max-width:100%; max-height:1.42in; object-fit:contain;
+  }
+  .back .footer{
+    position:relative; z-index:3; width:100%;
+    padding:0 .3in .17in; display:flex; flex-direction:column; align-items:center; gap:1.5pt;
+  }
+  .back .backname{
+    font-family:'Caveat',cursive; font-weight:700; font-size:15pt; line-height:1;
+    display:inline-block;
+    background:linear-gradient(115deg,var(--pink) 4%,var(--purple) 52%,var(--turquoise) 96%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
+  .back .backurl{
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:8.2pt;
+    color:#5A3E6B; letter-spacing:.02em;
+  }
+</style>
+</head>
+<body>
+
+<!-- ───────── page 1: FRONT ───────── -->
+<div class="card front">
+  <div class="glow"></div>
+  <div class="sheep">🐑</div>
+  <div class="safe">
+    <div class="wordmark">The Shivering Sheep</div>
+    <p class="tagline">HAND-KNIT &middot; FELTED &middot; ONE OF A KIND</p>
+    <div class="rule"></div>
+    <p class="contact">
+      <span class="url">theshiveringsheep.ca</span><br />
+      <span class="email">janet@theshiveringsheep.ca</span>
+    </p>
+  </div>
+</div>
+
+<!-- ───────── page 2: BACK ───────── -->
+<div class="card back">
+  <div class="band"></div>
+  <div class="bagwrap">
+    <img class="bag" src="images/cut-bag-circle-back.png" alt="A blue felted shoulder bag patterned with coloured circles" />
+  </div>
+  <div class="footer">
+    <span class="backname">The Shivering Sheep</span>
+    <span class="backurl">theshiveringsheep.ca</span>
+  </div>
+</div>
+
+</body>
+</html>
