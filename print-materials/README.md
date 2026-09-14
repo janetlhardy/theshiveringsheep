@@ -23,10 +23,22 @@ address. Back: one bag on cream, with the name and website again. **No Instagram
 there, and a handle that leads to an empty feed does more harm than no handle at all.
 
 **The banner.** The name large enough to read across a hall, the tagline, the website, and four bags
-on a cream panel: *Circle Back*, the **Purple / Hot Pink striped tote**, *Nordic Flurry* and
-*Bullseye*. One of the four is a striped tote deliberately — the striped totes are most of the
-stock, so the banner shows what's actually on the table. The other three are blue-dominant, so the
-pink-into-purple stripe brings the warmth, and it echoes the wordmark's own gradient. **No QR code**, deliberately: hung behind a table it sits too far away for a phone
+straight on the dark ground: *Circle Back*, the **Purple / Hot Pink striped tote**, *Shadow Play*
+and *Bullseye*.
+
+Three deliberate choices in that line-up:
+
+- **One is a striped tote**, because the striped totes are most of the stock and the banner should
+  show what's actually on the table.
+- **Nothing seasonal.** The snowflake tote *Nordic Flurry* was here first and came back out — this
+  banner has to work at a summer market as well as a Christmas one.
+- **Shadow Play carries the warm colours.** The other three are blue-dominant, so it's the one
+  bringing orange, yellow and green. Mondrian was the alternative but would have added a third blue.
+
+There's no cream panel behind them any more. An earlier version had one, because the photographs
+came on a white studio background and each bag sat in a visible pale rectangle. Once `cutouts.py`
+made them properly transparent the panel was only adding dead space, so the bags went straight onto
+the dark with a soft pool of light behind them. **No QR code**, deliberately: hung behind a table it sits too far away for a phone
 to focus on, so it would be decoration pretending to be useful.
 
 ## Ordering from VistaPrint
@@ -78,10 +90,11 @@ To use different bags: copy them into `images/` as `bag-<name>.jpeg`, run `pytho
 point the HTML at the new `cut-bag-<name>.png`. **Check the result on a dark background** — that's
 where a missed patch shows up.
 
-Source JPEGs for a few alternatives Janet shortlisted are already in `images/`, so swapping one in
-is a single command: **Forest Green / Hot Pink**, **Hot Pink / Neon Blue**, **Shadow Play**,
-**Mondrian**, **Hypnotic** and **Spiral Rose**. Their cut-out PNGs were deleted to keep the folder
-small — `cutouts.py` regenerates them all in a few seconds.
+Source JPEGs for the alternatives Janet shortlisted are already in `images/`, so swapping one in is
+a single command: **Forest Green / Hot Pink**, **Hot Pink / Neon Blue**, **Mondrian**, **Hypnotic**,
+**Spiral Rose** and **Nordic Flurry** (the snowflake tote, if a Christmas-only version is ever
+wanted). Note `cutouts.py` regenerates a PNG for *every* `bag-*.jpeg` it finds, so delete the ones
+you aren't using afterwards — they're 3 MB each and the folder grows quickly.
 
 ## Want changes?
 
