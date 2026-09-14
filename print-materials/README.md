@@ -23,7 +23,10 @@ address. Back: one bag on cream, with the name and website again. **No Instagram
 there, and a handle that leads to an empty feed does more harm than no handle at all.
 
 **The banner.** The name large enough to read across a hall, the tagline, the website, and four bags
-on a cream panel. **No QR code**, deliberately: hung behind a table it sits too far away for a phone
+on a cream panel: *Circle Back*, the **Purple / Hot Pink striped tote**, *Nordic Flurry* and
+*Bullseye*. One of the four is a striped tote deliberately — the striped totes are most of the
+stock, so the banner shows what's actually on the table. The other three are blue-dominant, so the
+pink-into-purple stripe brings the warmth, and it echoes the wordmark's own gradient. **No QR code**, deliberately: hung behind a table it sits too far away for a phone
 to focus on, so it would be decoration pretending to be useful.
 
 ## Ordering from VistaPrint
@@ -74,6 +77,11 @@ transparent PNGs (`images/cut-*.png`) and runs in two passes:
 To use different bags: copy them into `images/` as `bag-<name>.jpeg`, run `python3 cutouts.py`, and
 point the HTML at the new `cut-bag-<name>.png`. **Check the result on a dark background** — that's
 where a missed patch shows up.
+
+Source JPEGs for a few alternatives Janet shortlisted are already in `images/`, so swapping one in
+is a single command: **Forest Green / Hot Pink**, **Hot Pink / Neon Blue**, **Shadow Play**,
+**Mondrian**, **Hypnotic** and **Spiral Rose**. Their cut-out PNGs were deleted to keep the folder
+small — `cutouts.py` regenerates them all in a few seconds.
 
 ## Want changes?
 
