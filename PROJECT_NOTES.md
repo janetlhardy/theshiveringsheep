@@ -21,7 +21,7 @@
 - Dark purple/black background
 - Single file: `index.html`
 - Photos stored in `images/` subfolder
-- Two sections: Purses (12 cards) and Totes (approx. 30 cards)
+- Two sections: Purses (35 cards) and Totes (32 cards) — counts as of 2026-11-23
 - Hover pop effect on cards, swipe/drag carousel for photos
 
 ### Web Hosting
@@ -34,6 +34,11 @@ theshiveringsheep/
 ├── images/             ← all product photos (.jpeg)
 ├── PROJECT_NOTES.md    ← this file
 ```
+
+### Price & stock changes
+- **2026-11-23** (while packing for the December show, after rethinking size and work involved):
+  Tangerine Dream, Sunflower and Hypnotic $150 → **$175**; Mondrian and Shadow Play $125 →
+  **$150**. **Petit Pois removed** (given to Janet's daughter's friend) and its photos deleted.
 
 ---
 
@@ -90,6 +95,8 @@ continued. Worth remembering before suggesting any more marketing spend here.
 - [ ] Add double-handle main photo for Chartreuse/Lavender tote
 - [ ] Take more photos of Twilight and add to website
 - [x] Business card and booth banner for the December show ✅ (2026-09-14) — `print-materials/`
+- [x] Reprice five bags and remove Petit Pois ✅ (2026-11-23)
+- [ ] Add Janet's new bags to the site (photos, names, descriptions, prices)
 
 ---
 
